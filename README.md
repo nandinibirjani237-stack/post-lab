@@ -138,8 +138,57 @@ if(highestf<arr[i][1]){
 }
 }
     printf("\n highest marks %d",highestf);
-
+int lowest =arr[0][0];
+    for(int i=0;i<4;i++){
+        if(lowest>arr[i][0]){
+            lowest=arr[i][0];
+        }
+    }
+    printf("\nlowest marks from mid %d ",lowest);
+ int lowestf =arr[0][1];
+    for(int i=0;i<4;i++){
+        int lowestf =arr[0][1];
+        if(lowestf>arr[i][1]){
+            lowestf=arr[i][1];
+        }
+    }
+    printf("\nlowest marks from final %d ",lowestf);
     
+    int lowesta=arr[0][0];
+    for(int i=0;i<4;i++){
+        for(int j=0;j<2;j++){
+            if(lowesta>arr[i][j]){
+                lowesta=arr[i][j];
+            }
+        }
+    }
+    printf("\nlowest marks overall across both %d",lowesta);
+    
+    int highesta=arr[0][0];
+    for(int i=0;i<4;i++){
+        for(int j=0;j<2;j++){
+            if(highesta<arr[i][j]){
+                highesta=arr[i][j];
+                
+            }
+        }
+    }
+    printf("\nhighest marks overall across both %d",highesta);
+
+    float mid_avg=0.0;
+    int mid_sum=0;
+    for(int i=0;i<4;i++){
+        mid_sum+=arr[i][0];
+    }
+    mid_avg=mid_sum/4.0;
+    printf("\n average of mid %f\n",mid_avg);
+    float final_avg=0.0;
+    int final_sum=0;
+    for(int i=0;i<4;i++){
+        final_sum+=arr[i][1];
+    }
+    final_avg=final_sum/4.0;
+    printf("final average %f ",final_avg);
     
     return 0;
 }
